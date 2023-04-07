@@ -6,7 +6,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { Download, ExpandMore } from "@mui/icons-material";
+import { ArrowCircleDown, ExpandMore } from "@mui/icons-material";
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
@@ -28,8 +28,9 @@ export const FileCard = ({ file }) => {
                     href={file.webContentLink}
                     target="_blank"
                     rel="noreferrer"
+                    color="black"
                   >
-                    <Download />
+                    <ArrowCircleDown color="action" />
                   </a>
                 </Box>
               )}
