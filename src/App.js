@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { gapi } from "gapi-script";
 import { Check, Hub, ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { ButtonGroup, CircularProgress, Grid, IconButton } from "@mui/material";
@@ -44,7 +44,7 @@ const App = () => {
       });
   };
 
-  const listFiles = (searchTerm = null, previous = false) => {
+  const listFiles = (query = null, previous = false) => {
     setDriveLoading(true);
     let token = null;
     if (previous) {
@@ -57,7 +57,7 @@ const App = () => {
         pageSize: PAGE_SIZE,
         fields:
           "nextPageToken, files(id, name, mimeType, permissions, webContentLink)",
-        q: searchTerm,
+        q: query,
         pageToken: token,
       })
       .then((response) => {
@@ -71,7 +71,6 @@ const App = () => {
         setFiles(res.files);
       });
   };
-
   return (
     <Grid
       container
