@@ -1,23 +1,37 @@
-import logo from "./logo.svg";
+import { Box, Grid, Typography } from "@mui/material";
 
-function App() {
+import { DriveInput } from "./DriveInput";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Grid
+      container
+      direction="column"
+      sx={{
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+      }}
+    >
+      <Grid item>
+        <Box
+          sx={{
+            display: "flex",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Typography
+            sx={{
+              margin: "5px",
+              padding: "5px",
+            }}
+          >
+            Enter your drive here:{" "}
+          </Typography>
+          <DriveInput />
+        </Box>
+      </Grid>
+    </Grid>
   );
-}
+};
 
 export default App;
