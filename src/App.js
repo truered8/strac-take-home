@@ -16,11 +16,11 @@ const DISCOVERY_DOCS = [
 const SCOPES = "https://www.googleapis.com/auth/drive.readonly";
 
 const App = () => {
-  const [user, setUser] = useState(null);
   const [authLoading, setAuthLoading] = useState(false);
   const [driveLoading, setDriveLoading] = useState(false);
   const [files, setFiles] = useState([]);
   const [tokens, setTokens] = useState([null]);
+  const [user, setUser] = useState(null);
 
   const handleClientLoad = async () => {
     if (!user) gapi.load("client:auth2", initClient);
