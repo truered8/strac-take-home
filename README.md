@@ -1,5 +1,9 @@
 # Strac Take Home Project
 
+## Demo
+
+https://share.vidyard.com/watch/m483q1XezRW2WE2wrCUGrE?
+
 ## Instructions
 
 1. Install [node.js](https://nodejs.org/en) and [yarn](https://yarnpkg.com/).
