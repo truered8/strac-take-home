@@ -45,14 +45,15 @@ export const FileCard = ({ file }) => {
         </AccordionSummary>
 
         <AccordionDetails>
-          {file.permissions &&
-            file.permissions.map((permission, i) => (
-              <Typography variant="subtitle2" key={`permission-${i}`}>
-                <strong>{capitalize(permission.role)}:</strong>{" "}
-                {permission.displayName ?? permission.type}
-                <br />
-              </Typography>
-            ))}
+          {file.permissions
+            ? file.permissions.map((permission, i) => (
+                <Typography variant="subtitle2" key={`permission-${i}`}>
+                  <strong>{capitalize(permission.role)}:</strong>{" "}
+                  {permission.displayName ?? permission.type}
+                  <br />
+                </Typography>
+              ))
+            : "Permissions not found."}
         </AccordionDetails>
       </Accordion>
     </Grid>

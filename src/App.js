@@ -72,10 +72,6 @@ const App = () => {
       });
   };
 
-  useEffect(() => {
-    console.log(tokens);
-  }, [tokens]);
-
   return (
     <Grid
       container
