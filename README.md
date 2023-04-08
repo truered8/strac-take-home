@@ -2,7 +2,7 @@
 
 ## Demo
 
-https://share.vidyard.com/watch/m483q1XezRW2WE2wrCUGrE?
+https://share.vidyard.com/watch/eXqvDPKS4YvJ9tiknP7gCZ
 
 ## Instructions
 
@@ -41,6 +41,7 @@ Features include:
 
 - Connecting to Google Drive
 - Listing files and folders
+- Downloading files
 - Pagination
 - Listing people/groups who have access to each item
 
